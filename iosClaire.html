@@ -78,25 +78,60 @@
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
   </head>
 
-  <body style="font-family: Lora;">
-    <h1></h1>
+  <body style="font-family: Lora; background-color: #f5f5dc;">
 
-    <div>
-      <a href="#" onclick="change()" id="myButton" class="heartButton"></a>
+    <div class="quoteDiv">
+      <table class="quoteDiv">
+        <tr>
+          <td>
+          </td>
+          <td id="randomQuote" style="display:none;">
+                <script language="javascript" src="http://www.quotedb.com/quote/quote.php?action=random_quote"></script>
+          </td>
+          <td id="quoteOTD" style="display:none;">
+                <script type="text/javascript" src="http://www.brainyquote.com/link/quotebr.js"></script>
+          </td>
+          <td id="loveQuoteOTD" style="display:none;">
+                <script type="text/javascript" src="http://www.brainyquote.com/link/quotelo.js"></script>
+          </td>
+        </tr>
+      </table>
     </div>
 
-    <p id="text">
-      This is a test web application for iOS.
-    </p>
-
-    <br><script language="javascript" src="http://www.quotedb.com/quote/quote.php?action=random_quote"></script><br>
-
-    <script type="text/javascript" src="http://www.brainyquote.com/link/quotelo.js"></script>
+    <div class="buttonDiv">
+      <table style="width: 100vw">
+        <tr>
+          <td>
+            <a href="#" onclick="loveQuoteOTD()" id="heartButton" class="heartButton"></a>
+          </td>
+          <td>
+            <a href="#" onclick="quoteOTD()" id="dailyButton" class="dailyButton"></a>
+          </td>
+          <td>
+            <a href="#" onclick="randomQuote()" id="randomButton" class="randomButton"></a>
+          </td>
+        </tr>
+      </table>
+    </div>
 
     <script>
-    function change()
+    function loveQuoteOTD()
     {
-      document.getElementById("text").innerHTML="changed";
+      document.getElementById("randomQuote").style.display="none";
+      document.getElementById("quoteOTD").style.display="none";
+      document.getElementById("loveQuoteOTD").style.display="block";
+    }
+    function quoteOTD()
+    {
+      document.getElementById("randomQuote").style.display="none";
+      document.getElementById("quoteOTD").style.display="block";
+      document.getElementById("loveQuoteOTD").style.display="none";
+    }
+    function randomQuote()
+    {
+      document.getElementById("randomQuote").style.display="block";
+      document.getElementById("quoteOTD").style.display="none";
+      document.getElementById("loveQuoteOTD").style.display="none";
     }
     </script>
 

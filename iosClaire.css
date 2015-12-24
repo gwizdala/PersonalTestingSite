@@ -1,7 +1,7 @@
 .heartButton {
   background-image: url("static/images/heartButton.png");
-  height: 267px;
-  width: 300px;
+  height: 120px;
+  width: 120px;
 	background-color:#fe1a00;
 	-moz-border-radius:12px;
 	-webkit-border-radius:12px;
@@ -20,4 +20,64 @@
 .heartButton:active {
 	position:relative;
 	top:1px;
+}
+
+.randomButton {
+  background-image: url("static/images/randomButton.png");
+  height: 120px;
+  width: 120px;
+	background-color:#fe1a00;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+}
+.randomButton:hover {
+	background-color:#ce0100;
+}
+.randomButton:active {
+	position:relative;
+	top:1px;
+}
+
+.dailyButton {
+  background-image: url("static/images/dailyButton.png");
+  height: 120px;
+  width: 120px;
+	background-color:#fe1a00;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+}
+.dailyButton:hover {
+	background-color:#ce0100;
+}
+.dailyButton:active {
+	position:relative;
+	top:1px;
+}
+
+.quoteDiv {
+  height: 80vh;
+  width: 100vw;
+  text-align: center;
+  font-size:  20px;
+}
+
+.buttonDiv {
+  height: 20vh;
+  witdh:  100vw;
 }
