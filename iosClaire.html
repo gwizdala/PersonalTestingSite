@@ -76,7 +76,6 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="iosClaire.css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
   </head>
 
   <body style="font-family: Lora; background-color: #f5f5dc;">
@@ -86,7 +85,8 @@
         <tr>
           <td>
           </td>
-          <td id="randomQuote" style="display:none;">
+          <td id="randomQuote" style="display:block;">
+                <b>Random Quote</b></br>
                 <script language="javascript" src="http://www.quotedb.com/quote/quote.php?action=random_quote"></script>
           </td>
           <td id="quoteOTD" style="display:none;">
@@ -100,7 +100,7 @@
     </div>
 
     <div class="buttonDiv">
-      <table style="width: 100vw">
+      <table style="width: 100vw" class="buttonDiv">
         <tr>
           <td>
             <a href="#" onclick="loveQuoteOTD()" id="heartButton" class="heartButton"></a>
@@ -133,7 +133,7 @@
       document.getElementById("randomQuote").style.display="block";
       document.getElementById("quoteOTD").style.display="none";
       document.getElementById("loveQuoteOTD").style.display="none";
-      $('#quoteDiv').load(document.URL +  ' #quoteDiv');
+      location.reload();
     }
     </script>
 

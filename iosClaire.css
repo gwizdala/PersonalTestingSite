@@ -79,5 +79,6 @@
 
 .buttonDiv {
   height: 20vh;
-  witdh:  100vw;
+  width:  100vw;
+  text-align: center;
 }
