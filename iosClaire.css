@@ -1,0 +1,23 @@
+.heartButton {
+  background-image: url("static/images/heartButton.png");
+  height: 267px;
+  width: 300px;
+	background-color:#fe1a00;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+}
+.heartButton:hover {
+	background-color:#ce0100;
+}
+.heartButton:active {
+	position:relative;
+	top:1px;
+}

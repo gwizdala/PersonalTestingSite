@@ -72,13 +72,32 @@
         -webkit-text-size-adjust: 100%;
       }
     </style>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="iosClaire.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
   </head>
 
-  <body>
-    <h1>iOS 8 web app</h1>
+  <body style="font-family: Lora;">
+    <h1></h1>
 
-    <p>
+    <div>
+      <a href="#" onclick="change()" id="myButton" class="heartButton"></a>
+    </div>
+
+    <p id="text">
       This is a test web application for iOS.
     </p>
+
+    <br><script language="javascript" src="http://www.quotedb.com/quote/quote.php?action=random_quote"></script><br>
+
+    <script type="text/javascript" src="http://www.brainyquote.com/link/quotelo.js"></script>
+
+    <script>
+    function change()
+    {
+      document.getElementById("text").innerHTML="changed";
+    }
+    </script>
 
 </body>
