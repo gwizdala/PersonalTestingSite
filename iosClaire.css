@@ -1,7 +1,7 @@
 .heartButton {
   background-image: url("static/images/heartButton.png");
-  height: 120px;
-  width: 120px;
+  height: 90px;
+  width: 90px;
 	background-color:#fe1a00;
 	-moz-border-radius:12px;
 	-webkit-border-radius:12px;
@@ -24,8 +24,8 @@
 
 .randomButton {
   background-image: url("static/images/randomButton.png");
-  height: 120px;
-  width: 120px;
+  height: 90px;
+  width: 90px;
 	background-color:#fe1a00;
 	-moz-border-radius:12px;
 	-webkit-border-radius:12px;
@@ -48,8 +48,8 @@
 
 .dailyButton {
   background-image: url("static/images/dailyButton.png");
-  height: 120px;
-  width: 120px;
+  height: 90px;
+  width: 90px;
 	background-color:#fe1a00;
 	-moz-border-radius:12px;
 	-webkit-border-radius:12px;
@@ -78,7 +78,7 @@
 }
 
 .buttonDiv {
-  height: 50vh;
+  height: 20vh;
   width:  100vw;
   text-align: center;
 }
