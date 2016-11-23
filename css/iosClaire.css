@@ -1,0 +1,36 @@
+/* TABLE OF CONTENTS
+  Button Style
+  Div Styles
+*/
+
+.button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 90px;
+  width: 90px;
+	background-color:#fe1a00;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	display:inline-block;
+}
+.button:hover {
+	background-color:#ce0100;
+}
+.b:active {
+	position:relative;
+	top:1px;
+}
+
+.heartButton {
+  background-image: url("../img/heartButton.png");
+}
+
+.randomButton {
+  background-image: url("../img/randomButton.png");
+}
+
+.dailyButton {
+  background-image: url("../img/dailyButton.png");
+}
