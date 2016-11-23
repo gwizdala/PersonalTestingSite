@@ -41,8 +41,6 @@ function randomQuote()
   $.getJSON( {
         url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en',
         crossDomain: true,
-        dataType: 'jsonp',
-        type: 'GET',
         success: function(data) {
           console.log(data);
           $('#quote-title').text("Random Quote");
