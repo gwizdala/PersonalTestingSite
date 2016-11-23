@@ -4,31 +4,37 @@
 
 function loveQuoteOTD()
 {
-  var xhttp = new XMLHttpRequest();
-   xhttp.onreadystatechange = function() {
-     if (this.readyState == 4 && this.status == 200) {
-       console.log(this);
-       $('#quote-title').text("Love Quote of the Day");
-       $('#quote-content').html(post.content);
-     }
-   };
-   xhttp.open("GET", "https://www.brainyquote.com/link/quotelo.js", true);
-   xhttp.send();
+  $.ajax( {
+        url: 'http://quotes.rest/qod.json',
+        success: function(data) {
+          $('#quote-title').text("Quote of the Day");
+          $('#quote-content').html(data.contents.quotes[0].quote);
+          $('#quote-author').html(data.contents.quotes[0].author);
+        },
+        cache: false
+  });
 }
 function quoteOTD()
 {
-  document.getElementById("randomQuote").style.display="none";
-  document.getElementById("quoteOTD").style.display="block";
-  document.getElementById("loveQuoteOTD").style.display="none";
+  $.ajax( {
+        url: 'http://quotes.rest/qod.json?category=love',
+        success: function(data) {
+          $('#quote-title').text("Love Quote of the Day");
+          $('#quote-content').html(data.contents.quotes[0].quote);
+          $('#quote-author').html(data.contents.quotes[0].author);
+        },
+        cache: false
+  });
 }
 function randomQuote()
 {
   $.ajax( {
-        url: '/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+        url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en',
         success: function(data) {
-          var post = data.shift(); // The data is an array of posts. Grab the first one.
+          console.log(data);
           $('#quote-title').text("Random Quote");
-          $('#quote-content').html(post.content);
+          $('#quote-content').html(data.quoteText);
+          $('#quote-author').html(data.quoteAuthor);
         },
         cache: false
   });
